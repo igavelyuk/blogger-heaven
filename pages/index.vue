@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <Logo/>
     <Navbar/>
     <TextPosts/>
     <Youtube/>
@@ -9,14 +8,13 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+
 import Navbar from '~/components/Navbar.vue'
 import TextPosts from '~/components/TextPosts.vue'
 import Youtube from '~/components/Youtube.vue'
 
 export default {
   components: {
-    Logo,
     Navbar,
     TextPosts,
     Youtube

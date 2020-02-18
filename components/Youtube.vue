@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .you-box{
-  background-color: red;
+  background-color: yellow;
   height: 200px;
   width: 100%;
 }
