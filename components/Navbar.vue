@@ -34,7 +34,7 @@ export default {
 $menubuttons:#333333;
 $menubuttonsactive:#000000;
 $menubuttonsborder:$menubuttonsactive;
-*{outline:1px solid red;}
+// *{outline:1px solid red;}
 .navbar{
   display: grid;
   background-color: white;

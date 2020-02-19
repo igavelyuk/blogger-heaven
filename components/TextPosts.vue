@@ -35,7 +35,7 @@
       <p>в этой статье мы научимся обновлять биос для видеокарт radeon 5600xt</p>
       <a href="#"></a>
     </div>
-    
+
     <div class="article">
       test1
     </div>
@@ -76,33 +76,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-*{
-  outline: 1px solid magenta;
-}
+// *{
+//   outline: 1px solid magenta;
+// }
 $menubuttons:#333333;
 $menubuttonsactive:#000000;
 $menubuttonsborder:$menubuttonsactive;
 $bg:#333333;
-$light-bg:#aaaaaa;
-$dark-bg:#333333;
+$light-bg:#ffffff;
+$dark-bg:#dddddd;
 
 .text-box{
-  top:300px;
+  // top:300px;
   background-color: $bg;
   // width: 100%;
   display: grid;
   grid-gap:1em;
+  padding:1em;
   // grid-auto-rows: 200px;
   grid-template-columns: repeat(3, 1fr);
-  padding: 0px 20px 0px 20px;
+  // padding: 0px 20px 0px 20px;
   /* grid-template-columns: 20% 20% 20% 20% 20%; */
   font-size: 25px;
 }
-.text-box > div{
+.text-box > div.article{
   background-color: $light-bg;
   padding: 1em;
 }
-.text-box > div::nth-child(odd){
+.text-box > div.article:nth-child(odd){
   background-color: $dark-bg;
   padding: 1em;
 }
@@ -124,8 +125,9 @@ $dark-bg:#333333;
   }
   a{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 26px;
+    font-size: 22px;
     float: right;
+    font-waight:bolder;
     text-align: right;
     text-decoration: none;
     text-transform: uppercase;
