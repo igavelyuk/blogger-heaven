@@ -31,12 +31,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$menubuttons:#333333;
+$menubuttonsactive:#000000;
+$menubuttonsborder:$menubuttonsactive;
+*{outline:1px solid red;}
 .navbar{
   display: grid;
   background-color: white;
-  min-height: 100px;
+  // min-height: 100px;
   grid-auto-flow: column;
-  grid-gap:20px;
+  // grid-gap:20px;
   padding: 0px 20px 0px 20px;
   /* grid-template-columns: 20% 20% 20% 20% 20%; */
   font-size: 25px;
@@ -45,6 +49,7 @@ export default {
     justify-content: start;
     align-content: center;
     margin:10px;
+
   }
   .menuitems{
     display: grid;
@@ -73,7 +78,7 @@ export default {
       padding:22px;
       font-family: sans-serif;
       font-weight: lighter;
-      color: #333333;
+      color: $menubuttons;
       position: relative;
       text-decoration: none;
       text-transform: uppercase;
@@ -82,11 +87,11 @@ export default {
     a:hover{
       text-decoration: none;
       padding:20px;
-      border:2px solid #000000;
+      border:2px solid $menubuttonsactive;
       border-radius: 4px;
       font-family: sans-serif;
       font-weight: lighter;
-      color: #000000;
+      color: $menubuttonsactive;
       position: relative;
       text-decoration: none;
       text-transform: uppercase;
@@ -104,12 +109,12 @@ export default {
       overflow: hidden;
       position: relative;
 
-      span {
-        // z-index: 20;
-      }
+      // span {
+      //   // z-index: 20;
+      // }
 
       &:after {
-        background: #000;
+        background: $menubuttonsactive;
         content: "";
         height: 225px;
         width: 65px;
@@ -123,7 +128,6 @@ export default {
         // z-index: -10;
       }
     }
-
     .btn-4:hover {
 
       &:after {
