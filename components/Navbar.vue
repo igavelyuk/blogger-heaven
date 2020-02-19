@@ -35,20 +35,27 @@ export default {
   outline: 1px solid red;
 }
 .navbar{
-  display: grid;
+  /* display: grid; */
   background-color: lightskyblue;
   height: 200px;
-  grid-template-columns: 20% 80%;
+  /* grid-template-columns: 20% 20% 20% 20% 20%; */
 }
 .logoitem{
-  display: grid;
+  /* display: grid; */
 }
 .menuitem{
   display: grid;
-  grid-template-columns: 20% 80%;
+  /* grid-column-start :4;
+  grid-column-end: 6; */
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-area: 1;
   border: 1px solid black;
 }
 li{
+  /* display: grid; */
+  grid-column-start :2;
+  /* grid-column-end: 5; */
+  /* grid-area: 1 / 2 / 1 /6; */
   vertical-align: center;
   display:inline-block;
   font-size: 30px;
