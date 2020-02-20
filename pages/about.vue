@@ -22,6 +22,10 @@ export default {
 
 </script>
 
-<style lang="sass" scoped>
-
+<style lang="scss" scoped>
+  .about{
+    display:grid;
+    background-color: green;
+    font-size: 25px;
+  }
 </style>
