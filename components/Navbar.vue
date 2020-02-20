@@ -6,10 +6,10 @@
         </a>
       </div>
       <div class="menuitems">
-          <a class="btn btn-4" href="#"><span> Home </span></a>
-          <a class="btn btn-4" href="#"><span> Videos </span></a>
-          <a class="btn btn-4" href="#"><span>Merch</span></a>
-          <a class="btn btn-4" href="#"><span>About</span></a>
+          <nuxt-link class="btn btn-4" to="/"> <span> Home  </span></nuxt-link>
+          <nuxt-link class="btn btn-4" to="/"><span> Videos </span></nuxt-link>
+          <nuxt-link class="btn btn-4" to="/"><span>Merch</span></nuxt-link>
+          <nuxt-link class="btn btn-4" to="/about"><span>About</span></nuxt-link>
       </div>
   </div>
 </template>
@@ -110,7 +110,7 @@ $menubuttonsborder:$menubuttonsactive;
       position: relative;
 
       // span {
-      //   // z-index: 20;
+      //   z-index: 10;
       // }
 
       &:after {
@@ -118,7 +118,7 @@ $menubuttonsborder:$menubuttonsactive;
         content: "";
         height: 225px;
         width: 65px;
-        left: -250px;
+        left: -150px;
         opacity: .2;
         position: absolute;
         top: -80px;

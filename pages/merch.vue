@@ -3,10 +3,10 @@
     <Navbar/>
     <div class="main-content">
       <div class="left-side">
-        <TextPosts/>
+      
       </div>
       <div class="right-side">
-        <Youtube/>
+
       </div>
     </div>
 
@@ -18,15 +18,12 @@
 <script>
 
 import Navbar from '~/components/Navbar.vue'
-import TextPosts from '~/components/TextPosts.vue'
-import Youtube from '~/components/Youtube.vue'
+
 import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
     Navbar,
-    TextPosts,
-    Youtube,
     Footer
   }
 }
