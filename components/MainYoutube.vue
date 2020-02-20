@@ -1,17 +1,14 @@
 <template>
-  <div class="container">
+  <div class="">
     <Navbar/>
-    <div class="youtube">
+    <div v-bind:class="color">
+      {{articlename}}
     <!-- <h1>{{this.infox}}</h1> -->
-      <div class="red">
-          <MainYoutube color="red" articlename="Computers"/>
-      </div>
-      <div class="yellow">
-          <MainYoutube color="yellow" articlename="DIY"/>
-      </div>
-      <div class="blue">
-          <MainYoutube color="blue" articlename="Programming"/>
-      </div>
+    <Youtube v-for="joke in jokes" :key="joke.id" :id="joke.id" :joke="joke.joke" class="youtube"/>
+
+      <!-- <div class="right-side">
+
+      </div> -->
     </div>
 <!-- /////////////////////////////////////////////////////// -->
 
@@ -24,27 +21,16 @@
 
 <script>
 import axios from 'axios'
-import Navbar from '~/components/Navbar.vue'
 import Youtube from '~/components/Youtube.vue'
-import Footer from '~/components/Footer.vue'
-import MainYoutube from '~/components/MainYoutube.vue'
 
 export default {
-  name: 'Videos Page',
+  name: 'Main Youtube',
+  props:['color','articlename'],
   components: {
-    Navbar,
-    Youtube,
-    MainYoutube,
-    Footer
+    Youtube
   },
   data(){
     return{
-      info: null,
-      loading: true,
-      errored: false,
-      currency:0,
-      infox:0,
-      id:'sucxxxx',
       jokes:[]
     }
   },
@@ -88,24 +74,33 @@ $light-bg: #333555;
 $dark-bg: #333555;
 .youtube{
   // top:300px;
-  background-color: $bg;
+  // background-color: $bg;
   // width: 100%;
-  display: grid;
+  // display: grid;
   // grid-gap:1em;
   // padding:1em;
   grid-auto-rows:1fr;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1,1fr);
   // padding: 0px 20px 0px 20px;
-  /* grid-template-columns: 20% 20% 20% 20% 20%; */
-  font-size: 25px;
+  // grid-template-columns: 98%;
+  // font-size: 25px;
 }
-.youtube > div.article{
-  background-color: $light-bg;
-  padding: 1em;
+.red{
+  background-color: red;
 }
-.youtube > div.article:nth-child(odd){
-  background-color: $dark-bg;
-  padding: 1em;
+.yellow{
+  background-color: yellow;
 }
+.blue{
+  background-color: blue;
+}
+// .youtube > div.article{
+//   background-color: $light-bg;
+//   padding: 1em;
+// }
+// .youtube > div.article:nth-child(odd){
+//   background-color: $dark-bg;
+//   padding: 1em;
+// }
 
 </style>

@@ -7,8 +7,8 @@
       </div>
       <div class="menuitems">
           <nuxt-link class="btn btn-4" to="/"> <span> Home  </span></nuxt-link>
-          <nuxt-link class="btn btn-4" to="/"><span> Videos </span></nuxt-link>
-          <nuxt-link class="btn btn-4" to="/"><span>Merch</span></nuxt-link>
+          <nuxt-link class="btn btn-4" to="/videos"><span> Videos </span></nuxt-link>
+          <nuxt-link class="btn btn-4" to="/merch"><span>Merch</span></nuxt-link>
           <nuxt-link class="btn btn-4" to="/about"><span>About</span></nuxt-link>
       </div>
   </div>

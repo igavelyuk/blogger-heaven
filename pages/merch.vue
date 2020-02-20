@@ -3,7 +3,7 @@
     <Navbar/>
     <div class="main-content">
       <div class="left-side">
-      
+      cbbcbb
       </div>
       <div class="right-side">
 
@@ -22,6 +22,7 @@ import Navbar from '~/components/Navbar.vue'
 import Footer from '~/components/Footer.vue'
 
 export default {
+  name: 'Merch Page',
   components: {
     Navbar,
     Footer

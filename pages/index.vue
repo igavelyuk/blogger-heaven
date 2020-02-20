@@ -6,7 +6,7 @@
         <TextPosts/>
       </div>
       <div class="right-side">
-        <Youtube/>
+        <MainYoutube/>
       </div>
     </div>
 
@@ -20,13 +20,16 @@
 import Navbar from '~/components/Navbar.vue'
 import TextPosts from '~/components/TextPosts.vue'
 import Youtube from '~/components/Youtube.vue'
+import MainYoutube from '~/components/MainYoutube.vue'
 import Footer from '~/components/Footer.vue'
 
 export default {
+  name: 'Index',
   components: {
     Navbar,
     TextPosts,
     Youtube,
+    MainYoutube,
     Footer
   }
 }
@@ -35,7 +38,7 @@ export default {
 <style lang="scss" scoped>
 // *{outline:1px solid blue;}
 .container {
-  background-color: green;
+  // background-color: green;
   font-size: 25px;
 }
 .main-content{
@@ -48,8 +51,8 @@ export default {
 }
 .left-side{
   display: grid;
-  grid-column:1/3;
-  grid-row:1/3;
+  grid-column:1/5;
+  grid-row:1;
   // grid-gap:1em;
   // padding: 20px;
 
@@ -59,8 +62,8 @@ export default {
 }
 .right-side{
   display: grid;
-  grid-column:3;
-  grid-row:1/3;
+  grid-column:5;
+  grid-row:1/5;
   /* justify-content: start; */
   /* align-content: center; */
   /* margin:10px; */
