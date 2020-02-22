@@ -86,6 +86,7 @@
 <script>
 // import OtherComponent from './OtherComponent.vue'
 export default {
+  name: 'TextPosts',
   components: {
     // OtherComponent
   },

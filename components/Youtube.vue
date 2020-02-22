@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="you-box">
     <div class="articlez">
-      <h3>{{ joke }}</h3>
-      <a href="#">
-      <img src="https://img.youtube.com/vi/GpB7B7w2008/0.jpg" alt="">
-      </a>
+      <h5>{{ joke }}</h5>
+      <!-- <a :href="https://www.youtube.com/watch?v=r5kDCCknp4M&list=PLlpl3XXn_BinBiI04wPDAA9Vj3hPfLCwS&index=3&t=0s"> -->
+      <img :src="thumb" alt="">
+      <!-- </a> -->
     </div>
   </div>
 </template>
@@ -13,13 +13,13 @@
 // import OtherComponent from './OtherComponent.vue'
 export default {
   name: 'Youtube',
-  props: ['joke', 'id'],
+  props: ['joke', 'thumb'],
   components: {
     // OtherComponent
   },
   data () {
     return {
-      greeting: 'Hello'
+      greeting: this.thumb
     }
   }
 }
@@ -47,20 +47,24 @@ $readmorebuttons:#333333;
 //   padding: 1em;
 // }
 .articlez{
-  padding-top: 1em;
+  // padding-top: 1em;
   display: grid;
   // grid-gap:1em;
   grid-template-columns: 1fr;
   margin: 0px;
+  border: 5px solid white;
   // padding: 10px 10px 10px 10px;
 }
-h3{
+h5{
+  // float: right;
+  position: relative;
   margin: 1px;
   font-family: 'Courier New', Courier, monospace;
+  color:white;
   font-size: 32px;
   text-align: center;
   top:50%;
-  left:50%;
+
 // bottom: 20px;
 // right: 20px;
   background-color: rgba(10,10,10, 0.8);

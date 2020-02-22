@@ -1,37 +1,49 @@
 <template>
   <div class="">
-    <Navbar/>
+    <!-- <Navbar/> -->
     <div v-bind:class="color">
       {{articlename}}
     <!-- <h1>{{this.infox}}</h1> -->
-    <Youtube v-for="joke in jokes" :key="joke.id" :id="joke.id" :joke="joke.joke" class="youtube"/>
+    <Youtube v-for="video in videos.items" :key="video" :joke="video.snippet.title" :thumb="video.snippet.thumbnails.high.url"
 
+     class="youtube"/>
       <!-- <div class="right-side">
 
       </div> -->
     </div>
-<!-- /////////////////////////////////////////////////////// -->
-
-
-<!-- ////////////////////////////////////////////////////// -->
-
-    <Footer/>
+    <!-- <Footer/> -->
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+// import Navbar from '~/components/Navbar.vue'
 import Youtube from '~/components/Youtube.vue'
+// import Footer from '~/components/Footer.vue'
 
 export default {
-  name: 'Main Youtube',
+  name: 'MainYoutube',
   props:['color','articlename'],
   components: {
-    Youtube
+    // Navbar,
+    Youtube,
+    // Footer
   },
   data(){
     return{
-      jokes:[]
+      videos:[]
+    }
+  },
+  computed: {
+    reverseItems() {
+      // if(this.videos.items != undefined){
+        var Base = this.videos.items
+        var Rev = [];
+        for (var i = 0; i < Base.lenght; i++){
+          Rev[Base.lenght - i] = Base.lenght[i]
+        }
+        this.videos.items = Rev
+      // }
     }
   },
   // filters:{
@@ -50,19 +62,24 @@ export default {
   //
   // },
   async created(){
-    const config = {
-      headers: {
-        'Accept': 'application/json'
-      }
-    }
+    // const config = {
+      // headers: {
+      //   'Accept': 'application/json'
+      // },
+    //   'part': 'snippet',
+    //   'key': 'AIzaSyDwNbtxcWGG7CMa9byPBQbQtBhgZsb3RXM',
+    //   'maxResults': '10',
+    //   'playlistId': 'PLlpl3XXn_Bin98Q7fNjaTUOYQXhDZBU-i'
+    // }
     try {
-      const res = await axios.get("https://icanhazdadjoke.com/search", config)
+      const res = await axios.get("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLlpl3XXn_BinBiI04wPDAA9Vj3hPfLCwS&maxResults=10&key=AIzaSyDwNbtxcWGG7CMa9byPBQbQtBhgZsb3RXM")
       console.log(res.data)
-      this.jokes = res.data.results
+      this.videos = res.data
     } catch (err) {
       console.log(err)
     }
   }
+
   // finish export
 }
 </script>

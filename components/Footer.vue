@@ -45,7 +45,9 @@
 <script>
 // import OtherComponent from './OtherComponent.vue'
 export default {
+  name: 'Footer',
   components: {
+
     // OtherComponent
   },
   data () {

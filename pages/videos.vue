@@ -30,7 +30,7 @@ import Footer from '~/components/Footer.vue'
 import MainYoutube from '~/components/MainYoutube.vue'
 
 export default {
-  name: 'Videos Page',
+  name: 'VideosPage',
   components: {
     Navbar,
     Youtube,
@@ -39,13 +39,7 @@ export default {
   },
   data(){
     return{
-      info: null,
-      loading: true,
-      errored: false,
-      currency:0,
-      infox:0,
-      id:'sucxxxx',
-      jokes:[]
+      // videos:[]
     }
   },
   // filters:{
@@ -63,20 +57,20 @@ export default {
   // updated:{
   //
   // },
-  async created(){
-    const config = {
-      headers: {
-        'Accept': 'application/json'
-      }
-    }
-    try {
-      const res = await axios.get("https://icanhazdadjoke.com/search", config)
-      console.log(res.data)
-      this.jokes = res.data.results
-    } catch (err) {
-      console.log(err)
-    }
-  }
+  // async created(){
+  //   const config = {
+  //     headers: {
+  //       'Accept': 'application/json'
+  //     }
+  //   }
+  //   try {
+  //     const res = await axios.get("https://icanhazdadjoke.com/search", config)
+  //     console.log(res.data)
+  //     this.jokes = res.data.results
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
   // finish export
 }
 </script>

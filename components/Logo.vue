@@ -6,7 +6,8 @@
 <script>
 // import Image from '~/assets/21281697.png'
 //
-// export default {
+export default {
+  name: 'Logo'
 //   components: {
 //     Image
 //   },
@@ -15,7 +16,7 @@
 //       greeting: 'Hello'
 //     }
 //   }
-// }
+}
 </script>
 <style>
 .logo{
