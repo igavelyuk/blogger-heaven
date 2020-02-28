@@ -25,7 +25,7 @@ export default {
   vertical-align: middle;
   border: 1px solid black;
   border-radius: 50%;
-  filter: grayscale(30%) hue-rotate(150deg);
+  /* filter: grayscale(30%) hue-rotate(150deg); */
   /* filter: hue-rotate(30deg); */
 }
 </style>

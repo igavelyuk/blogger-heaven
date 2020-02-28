@@ -6,11 +6,10 @@
         <TextPosts/>
       </div>
       <div class="right-side">
-        <MainYoutube/>
+        <!-- <MainYoutube/> -->
+        <MainYoutube color="grey" articlename="Blog" playlist="PLlpl3XXn_BinBiI04wPDAA9Vj3hPfLCwS" youkey="AIzaSyDwNbtxcWGG7CMa9byPBQbQtBhgZsb3RXM"/>
       </div>
     </div>
-
-
     <Footer/>
   </div>
 </template>

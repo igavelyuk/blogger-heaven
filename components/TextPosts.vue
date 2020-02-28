@@ -92,7 +92,27 @@ export default {
   },
   data () {
     return {
-      greeting: 'Hello'
+      articles: []
+    }
+  },
+  async created(){
+    // const config = {
+      // headers: {
+      //   'Accept': 'application/json'
+      // },
+    //   'part': 'snippet',
+    //   'key': 'AIzaSyDwNbtxcWGG7CMa9byPBQbQtBhgZsb3RXM',
+    //   'maxResults': '10',
+    //   'playlistId': 'PLlpl3XXn_Bin98Q7fNjaTUOYQXhDZBU-i'
+    // }
+    try {
+      const res = await axios.get("http://localhost:3000/articles.json")
+      // console.log(res.data)
+      // this.videos = res.data
+      this.articles = res.data.reverse()
+      console.log(this.articles)
+    } catch (err) {
+      // console.log(err)
     }
   }
 }

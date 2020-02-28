@@ -1,9 +1,16 @@
 <template lang="html">
   <div class="you-box">
     <div class="articlez">
-      <h5>{{ joke }}</h5>
+
+        <h5>{{ joke }}</h5>
+
+        <img v-if="hotswap" :src="thumb" v-on:click="hotswapf" alt="" width="560" height="315">
+        <iframe v-else v-on:click="hotswapf" width="560" height="315" :src="'https://www.youtube-nocookie.com/embed/'+videoid" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
       <!-- <a :href="https://www.youtube.com/watch?v=r5kDCCknp4M&list=PLlpl3XXn_BinBiI04wPDAA9Vj3hPfLCwS&index=3&t=0s"> -->
-      <img :src="thumb" alt="">
+      <!-- <img :src="thumb" alt=""> -->
+      <!-- <iframe width="560" height="315" :src="'https://www.youtube-nocookie.com/embed/'+videoid" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <!-- <iframe width="560" height="315" :src="'https://www.youtube-nocookie.com/embed/'+videoid" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       <!-- </a> -->
     </div>
   </div>
@@ -13,20 +20,26 @@
 // import OtherComponent from './OtherComponent.vue'
 export default {
   name: 'Youtube',
-  props: ['joke', 'thumb'],
+  props: ['joke', 'thumb', 'videoid'],
   components: {
     // OtherComponent
   },
   data () {
     return {
-      greeting: this.thumb
+      greeting: this.thumb,
+      hotswap: true
+    }
+  },
+  methods: {
+    hotswapf: function () {
+      this.hotswap = !this.hotswap
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-*{outline: 1px solid green;}
+// *{outline: 1px solid green;}
 $light-bg:#ffffff;
 $dark-bg:#dddddd;
 $readmorebuttons:#333333;
@@ -51,20 +64,23 @@ $readmorebuttons:#333333;
   display: grid;
   // grid-gap:1em;
   grid-template-columns: 1fr;
+  grid-template-rows: auto;
   margin: 0px;
   border: 5px solid white;
+  // height: 500px;
+  width: auto;
   // padding: 10px 10px 10px 10px;
 }
-h5{
-  // float: right;
+.container{
   position: relative;
-  margin: 1px;
+}
+h5{
+  position: relative;
   font-family: 'Courier New', Courier, monospace;
   color:white;
-  font-size: 32px;
+  font-size: 26px;
   text-align: center;
-  top:50%;
-
+  // height: 50%;
 // bottom: 20px;
 // right: 20px;
   background-color: rgba(10,10,10, 0.8);
@@ -81,6 +97,12 @@ p{
 img{
   width:100%;
   height:auto;
+  // float: left;
+  // text-align: center;
+}
+iframe{
+  width:100%;
+  height:315px;
   // float: left;
   // text-align: center;
 }

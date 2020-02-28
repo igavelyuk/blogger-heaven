@@ -2,9 +2,9 @@
   <div class="">
     <!-- <Navbar/> -->
     <div v-bind:class="color">
-      {{articlename}}
+      <h3>{{articlename}}</h3>
     <!-- <h1>{{this.infox}}</h1> -->
-    <Youtube v-for="video in videos.items" :key="video" :joke="video.snippet.title" :thumb="video.snippet.thumbnails.high.url"
+    <Youtube v-for="video in reverse" :key="video" :joke="video.snippet.title" :thumb="video.snippet.thumbnails.high.url" :videoid="video.snippet.resourceId.videoId"
 
      class="youtube"/>
       <!-- <div class="right-side">
@@ -23,7 +23,7 @@ import Youtube from '~/components/Youtube.vue'
 
 export default {
   name: 'MainYoutube',
-  props:['color','articlename'],
+  props:['color','articlename',"playlist","youkey"],
   components: {
     // Navbar,
     Youtube,
@@ -31,20 +31,14 @@ export default {
   },
   data(){
     return{
-      videos:[]
+      reverse: []
     }
   },
+  methods: {
+
+  },
   computed: {
-    reverseItems() {
-      // if(this.videos.items != undefined){
-        var Base = this.videos.items
-        var Rev = [];
-        for (var i = 0; i < Base.lenght; i++){
-          Rev[Base.lenght - i] = Base.lenght[i]
-        }
-        this.videos.items = Rev
-      // }
-    }
+
   },
   // filters:{
   //
@@ -72,11 +66,13 @@ export default {
     //   'playlistId': 'PLlpl3XXn_Bin98Q7fNjaTUOYQXhDZBU-i'
     // }
     try {
-      const res = await axios.get("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLlpl3XXn_BinBiI04wPDAA9Vj3hPfLCwS&maxResults=10&key=AIzaSyDwNbtxcWGG7CMa9byPBQbQtBhgZsb3RXM")
-      console.log(res.data)
-      this.videos = res.data
+      const res = await axios.get("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId="+this.playlist+"&maxResults=10&key="+this.youkey)
+      // console.log(res.data)
+      // this.videos = res.data
+      this.reverse = res.data.items.reverse()
+      console.log(this.reverse)
     } catch (err) {
-      console.log(err)
+      // console.log(err)
     }
   }
 
@@ -102,14 +98,28 @@ $dark-bg: #333555;
   // grid-template-columns: 98%;
   // font-size: 25px;
 }
+h3{
+  position: relative;
+  margin: 1px;
+  // font-family: 'Courier New', Courier, monospace;
+  font-family: sans-serif;
+  font-weight: lighter;
+  color:#ffffff;
+  font-size: 32px;
+  text-align: center;
+  top:50%;
+}
 .red{
-  background-color: red;
+  background-color: #B71C1C;
 }
 .yellow{
-  background-color: yellow;
+  background-color: #880E4F;
 }
 .blue{
-  background-color: blue;
+  background-color: #4A148C;
+}
+.grey{
+  background-color: #333333;
 }
 // .youtube > div.article{
 //   background-color: $light-bg;

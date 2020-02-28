@@ -20,10 +20,10 @@
       </div>
       <div class="styled-footer second">
         <h5>Navigation</h5>
-        <a href="#">Home</a>
-        <a href="#">Videos</a>
-        <a href="#">Merch</a>
-        <a href="#">About</a>
+        <nuxt-link class="btn btn-4" to="/">Home</nuxt-link>
+        <nuxt-link class="btn btn-4" to="/videos">Videos</nuxt-link>
+        <nuxt-link class="btn btn-4" to="/merch">Merch</nuxt-link>
+        <nuxt-link class="btn btn-4" to="/about">About</nuxt-link>
       </div>
       <div class="styled-footer forth">
         <h5>Working shedule</h5>
@@ -72,8 +72,8 @@ export default {
   // grid-gap:20px;
   padding: 0px 20px 0px 20px;
   grid-template-columns: 99%;
-  font-size: 25px;
-  color: white;
+        // font-size: 25px;
+        // color: white;
   // .logoitem{
   //   display: grid;
   //   justify-content: start;
@@ -81,11 +81,19 @@ export default {
   //   margin:10px;
   //
   // }
+
+  font-family: sans-serif;
+  font-weight: lighter;
+  color:#ffffff;
+  font-size: 22px;
+  text-align: center;
+  top:50%;
+
   .footeritems{
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: 25% 15% 15% 45%;
+    grid-template-columns: 20% 20% 20% 40%;
     grid-area: 1;
     grid-auto-flow: column;
     grid-gap: 1rem;
