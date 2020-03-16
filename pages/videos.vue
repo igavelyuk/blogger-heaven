@@ -6,13 +6,13 @@
   </div>
     <div class="youtube">
       <div class="red">
-          <MainYoutube color="red" articlename="Web Dev" playlist="PLlpl3XXn_BilH0bItpa2zrH4lVCusvbwq" youkey="AIzaSyDwNbtxcWGG7CMa9byPBQbQtBhgZsb3RXM"/>
+          <MainYoutube color="red" articlename="Web Dev" playlist="PLlpl3XXn_BilH0bItpa2zrH4lVCusvbwq" youkey="AIzaSyBulNUwdFbe25b9m_7uGC9c1cULp49UMSA"/>
       </div>
       <div class="yellow">
-          <MainYoutube color="yellow" articlename="Linux" playlist="PLlpl3XXn_Bik-5SdpKSyMDUyPKi2iJAda" youkey="AIzaSyDwNbtxcWGG7CMa9byPBQbQtBhgZsb3RXM"/>
+          <MainYoutube color="yellow" articlename="Linux" playlist="PLlpl3XXn_Bik-5SdpKSyMDUyPKi2iJAda" youkey="AIzaSyBulNUwdFbe25b9m_7uGC9c1cULp49UMSA"/>
       </div>
       <div class="blue">
-          <MainYoutube color="blue" articlename="Projects" playlist="PLlpl3XXn_Bikj3gTwclTsaThJlpviiqFz" youkey="AIzaSyDwNbtxcWGG7CMa9byPBQbQtBhgZsb3RXM"/>
+          <MainYoutube color="blue" articlename="Projects" playlist="PLlpl3XXn_Bikj3gTwclTsaThJlpviiqFz" youkey="AIzaSyBulNUwdFbe25b9m_7uGC9c1cULp49UMSA"/>
       </div>
     </div>
 <!-- /////////////////////////////////////////////////////// -->

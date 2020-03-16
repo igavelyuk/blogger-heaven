@@ -83,8 +83,7 @@ h5{
   // height: 50%;
 // bottom: 20px;
 // right: 20px;
-  background-color: rgba(10,10,10, 0.8);
-  color: white;
+  background-color: rgba(0,0,0, 0.1);
 // padding-left: 5px;
 // padding-right: 5px;
 }
@@ -96,7 +95,8 @@ p{
 }
 img{
   width:100%;
-  height:auto;
+  height:315px;
+  object-fit: cover;
   // float: left;
   // text-align: center;
 }
@@ -116,7 +116,6 @@ a{
   text-transform: uppercase;
   color: $readmorebuttons;
 }
-
 a::before{
   content:'читать';
 }
@@ -130,6 +129,4 @@ div.articlez:nth-child(odd){
     color: $light-bg;
   }
 }
-
-
 </style>

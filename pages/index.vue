@@ -7,7 +7,7 @@
       </div>
       <div class="right-side">
         <!-- <MainYoutube/> -->
-        <MainYoutube color="grey" articlename="Blog" playlist="PLlpl3XXn_BinBiI04wPDAA9Vj3hPfLCwS" youkey="AIzaSyDwNbtxcWGG7CMa9byPBQbQtBhgZsb3RXM"/>
+        <MainYoutube color="grey" articlename="Blog" playlist="PLlpl3XXn_BinBiI04wPDAA9Vj3hPfLCwS" youkey="AIzaSyApXFbuT8cQmUFhVQr_V56w7DdaC6r3GGE"/>
       </div>
     </div>
     <Footer/>
