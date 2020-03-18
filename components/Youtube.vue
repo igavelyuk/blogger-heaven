@@ -94,14 +94,14 @@ p{
   text-justify: inter-character;
 }
 img{
-  width:100%;
+  width:99%;
   height:315px;
   object-fit: cover;
   // float: left;
   // text-align: center;
 }
 iframe{
-  width:100%;
+  width:99%;
   height:315px;
   // float: left;
   // text-align: center;

@@ -4,7 +4,9 @@ export default ({
     ]
   },
   mutations: {
-
+    addPosts2Store (state, payload) {
+      state.sale.push(payload)
+    }
   },
   actions: {
 

@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Navbar/>
+    {{na}}
     <div class="main-content">
       <div class="left-side">
         <TextPosts/>
@@ -15,6 +16,9 @@
 </template>
 
 <script>
+
+// import blogsFromJson from '~/assets/articles.json';
+
 
 import Navbar from '~/components/Navbar.vue'
 import TextPosts from '~/components/TextPosts.vue'

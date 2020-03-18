@@ -70,7 +70,7 @@ export default {
       // console.log(res.data)
       // this.videos = res.data
       this.reverse = res.data.items.reverse()
-      console.log(this.reverse)
+      // console.log(this.reverse)
     } catch (err) {
       // console.log(err)
     }

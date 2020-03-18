@@ -44,6 +44,7 @@ $menubuttonsborder:$menubuttonsactive;
   // grid-gap:20px;
   padding: 0px 20px 0px 20px;
   /* grid-template-columns: 20% 20% 20% 20% 20%; */
+  width: 93%;
   font-size: 25px;
   .logoitem{
     display: grid;
@@ -59,7 +60,7 @@ $menubuttonsborder:$menubuttonsactive;
     /* grid-template-columns: 20% 20% 20% 20% 20%;
     grid-area: 1; */
     grid-auto-flow: column;
-    grid-gap: 20px;
+    grid-gap: 50px;
 
 ///////////////////////////////
     // align-items: center;
@@ -83,7 +84,7 @@ $menubuttonsborder:$menubuttonsactive;
       position: relative;
       text-decoration: none;
       text-transform: uppercase;
-      width: 100%;
+      width: 99%;
     }
     a:hover{
       text-decoration: none;
@@ -96,7 +97,7 @@ $menubuttonsborder:$menubuttonsactive;
       position: relative;
       text-decoration: none;
       text-transform: uppercase;
-      width: 100%;
+      width: 99%;
     }
   }
 /////////////////////////////
