@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <Navbar/>
-    {{na}}
     <div class="main-content">
       <div class="left-side">
         <TextPosts/>

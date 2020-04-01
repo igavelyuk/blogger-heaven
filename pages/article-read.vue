@@ -65,6 +65,11 @@ export default {
       }
     ]
     }
+  },
+  created(){
+    this.$http.get('http://jasonplaceholder.typicode.com/posts/'+this.id).then(function(data){
+      console.log(data)
+    })
   }
 };
 

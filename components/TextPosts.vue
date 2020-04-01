@@ -4,7 +4,7 @@
         <div class="article btn-4">
           <h3>{{article.title}}</h3>
           <p>{{article.preview}}</p>
-          <a href="#"></a>
+          <nuxt-link class="btn btn-4" v-bind:to="'/article-read/'+article.id"> {{ article.id }}</nuxt-link>
         </div>
     </div>
   </div>
