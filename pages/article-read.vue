@@ -13,6 +13,7 @@
 import Navbar from '~/components/Navbar.vue'
 import ReadPost from '~/components/ReadPost.vue'
 import Footer from '~/components/Footer.vue'
+// import markdown from 'vue-markdown'
 
 export default {
   components: {
@@ -22,54 +23,8 @@ export default {
   },
   data () {
     return {
-      id: this.$route.params.id,
-      articles: [{
-        "id":"0",
-        "title": "This is Title 1",
-        "preview": "Small article how to flash your Radeon 5600XT videocard BIOS",
-        "paragraph": [
-          "Small 1 article how to flash your Radeon 5600XT videocard BIOS",
-          "Small 2 article how to flash your Radeon 5600XT videocard BIOS",
-          "Small 3 article how to flash your Radeon 5600XT videocard BIOS"
-        ]
-      },
-      {
-        "id":"1",
-        "title": "This is Title 2",
-        "preview": "Small article how to flash your Radeon 5600XT videocard BIOS",
-        "paragraph": [
-          "Small 1 article how to flash your Radeon 5600XT videocard BIOS",
-          "Small 2 article how to flash your Radeon 5600XT videocard BIOS",
-          "Small 3 article how to flash your Radeon 5600XT videocard BIOS"
-        ]
-      },
-      {
-        "id":"2",
-        "title": "This is Title 3",
-        "preview": "Small article how to flash your Radeon 5600XT videocard BIOS",
-        "paragraph": [
-          "Small 1 article how to flash your Radeon 5600XT videocard BIOS",
-          "Small 2 article how to flash your Radeon 5600XT videocard BIOS",
-          "Small 3 article how to flash your Radeon 5600XT videocard BIOS"
-        ]
-      },
-      {
-        "id":"3",
-        "title": "This is Title 3",
-        "preview": "Small article how to flash your Radeon 5600XT videocard BIOS",
-        "paragraph": [
-          "Small 1 article how to flash your Radeon 5600XT videocard BIOS",
-          "Small 2 article how to flash your Radeon 5600XT videocard BIOS",
-          "Small 3 article how to flash your Radeon 5600XT videocard BIOS"
-        ]
-      }
-    ]
+      id: this.$route.params.id
     }
-  },
-  created(){
-    this.$http.get('http://jasonplaceholder.typicode.com/posts/'+this.id).then(function(data){
-      console.log(data)
-    })
   }
 };
 

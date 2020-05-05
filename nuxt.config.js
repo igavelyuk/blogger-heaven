@@ -27,8 +27,7 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: ['~/plugins/markdown-preview.js'],
   /*
   ** Nuxt.js dev-modules
   */
@@ -38,6 +37,9 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+            //added new
+
+            //added new
   ],
   /*
   ** Build configuration
@@ -48,5 +50,9 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  server: {
+    port: 8000, // default: 3000
+    host: '0.0.0.0' // default: localhost
   }
 }

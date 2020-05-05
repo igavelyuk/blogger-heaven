@@ -44,6 +44,9 @@ export default {
       // videos:[]
     }
   },
+  mounted () {
+    this.$myInjectedFunction('test')
+  }
   // filters:{
   //
   // },
@@ -82,37 +85,31 @@ export default {
 $bg: #01579B;
 $light-bg: #333555;
 $dark-bg: #333555;
-h1{
-  position: relative;
-  margin: 30px;
-  // font-family: 'Courier New', Courier, monospace;
-  font-family: sans-serif;
-  font-weight: lighter;
-  color:#ffffff;
-  font-size: 52px;
-  text-align: center;
-  // top:50%;
-}
-.youtube{
-  // top:300px;
-  background-color: $bg;
-  // width: 100%;
-  display: grid;
-  // grid-gap:1em;
-  // padding:1em;
-  grid-auto-rows:1fr;
-  grid-template-columns: repeat(3, 1fr);
-  // padding: 0px 20px 0px 20px;
-  /* grid-template-columns: 20% 20% 20% 20% 20%; */
-  font-size: 25px;
-}
-.youtube > div.article{
-  background-color: $light-bg;
-  padding: 1em;
-}
-.youtube > div.article:nth-child(odd){
-  background-color: $dark-bg;
-  padding: 1em;
-}
+  h1{
+    position: relative;
+    margin: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color:#ffffff;
+    font-size: 52px;
+    text-align: center;
+
+  }
+  .youtube{
+    background-color: $bg;
+    display: grid;
+    grid-auto-rows:1fr;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 25px;
+  }
+  .youtube > div.article{
+    background-color: $light-bg;
+    padding: 1em;
+  }
+  .youtube > div.article:nth-child(odd){
+    background-color: $dark-bg;
+    padding: 1em;
+  }
 
 </style>
